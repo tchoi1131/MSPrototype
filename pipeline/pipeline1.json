@@ -20,11 +20,28 @@
 						"sqlReaderQuery": "SELECT [EventId]\n      ,[EventDate]\n      ,[EventType]\n      ,[WorkFlowId]\n      ,[WorkFlowName]\n      ,[InsertedDateTime]\n      ,[UpdatedDateTime]\n      ,[IsDeleted]\n      ,[IsTestData]\n  FROM [vwWorkFlowEvent] WITH (NOLOCK)",
 						"queryTimeout": "02:00:00"
 					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "MSPrototypeSqlServerVWWorkFlowEvent",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "MSPrototypeDelimitedText",
 						"type": "DatasetReference"
 					}
 				]
