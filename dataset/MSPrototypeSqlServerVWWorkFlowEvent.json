@@ -1,5 +1,5 @@
 {
-	"name": "MSPrototypeSqlServerVWWorkFlowEventTable",
+	"name": "MSPrototypeSqlServerVWWorkFlowEvent",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "MSPrototypeSqlServer",
