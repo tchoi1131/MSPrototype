@@ -1,0 +1,27 @@
+{
+	"name": "MSPrototypeDelimitedText",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MSPrototypeDataLakeStorageGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat('Workflow_', formatDateTime(utcnow(), 'MM-dd-yyyy'))",
+					"type": "Expression"
+				},
+				"folderPath": "WorkFlow",
+				"fileSystem": "msprototype"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
