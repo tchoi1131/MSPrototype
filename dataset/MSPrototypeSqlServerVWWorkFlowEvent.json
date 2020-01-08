@@ -1,0 +1,62 @@
+{
+	"name": "MSPrototypeSqlServerVWWorkFlowEvent",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MSPrototypeSqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "EventId",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "EventDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "EventType",
+				"type": "varchar"
+			},
+			{
+				"name": "WorkFlowId",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "WorkFlowName",
+				"type": "varchar"
+			},
+			{
+				"name": "InsertedDateTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UpdatedDateTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "IsDeleted",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IsTestData",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "vwWorkFlowEvent"
+		}
+	}
+}

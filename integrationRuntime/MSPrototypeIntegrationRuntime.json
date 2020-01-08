@@ -1,0 +1,6 @@
+{
+	"name": "MSPrototypeIntegrationRuntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

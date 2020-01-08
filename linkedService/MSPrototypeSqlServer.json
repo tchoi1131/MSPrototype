@@ -1,0 +1,17 @@
+{
+	"name": "MSPrototypeSqlServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=10.120.190.28;initial catalog=CommerceDB_0_Primary",
+			"userName": "REDMOND\\v-shli5",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjYTk5N2MyMi0wNTRjLTRmNGQtYTIwZC0wMTYxNWNmMGUwNzIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "MSPrototypeIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
